@@ -1,9 +1,7 @@
-# Criar git_cli.md
-cat <<EOF > git_cli.md
 # GIT
+```bash
+################## Configuração ##################
 
-## Configuração
-\`\`\`
 # Configurar nome de usuário global
 git config --global user.name "<your_name>"
 
@@ -18,10 +16,9 @@ git config --local user.email "<your_email>"
 
 # Verificar configurações
 git config --list
-\`\`\`
 
-## Branches
-\`\`\`
+
+################## Branches ##################
 # Criar uma nova branch
 git branch <branch_name>
 
@@ -39,10 +36,8 @@ git branch -r
 
 # Deletar uma branch local
 git branch -d <branch_name>
-\`\`\`
 
-## Remotes
-\`\`\`
+################## Remotes ##################
 # Adicionar um remote
 git remote add origin <repository_url>
 
@@ -51,10 +46,8 @@ git remote -v
 
 # Alterar URL de um remote
 git remote set-url origin <new_repository_url>
-\`\`\`
 
-## Commit e Push
-\`\`\`
+################## Commit e Push ##################
 # Adicionar todos os arquivos ao stage
 git add .
 
@@ -66,19 +59,16 @@ git push origin <branch_name>
 
 # Forçar push (usar com cuidado)
 git push --force
-\`\`\`
 
-## Pull e Fetch
-\`\`\`
+
+##################  Pull e Fetch ##################
 # Atualizar branch local com alterações do repositório remoto
 git pull origin <branch_name>
 
 # Baixar alterações sem aplicá-las
 git fetch origin
-\`\`\`
 
-## Criar Ambientes de Configuração Separados
-\`\`\`
+################## Criar Ambientes de Configuração Separados ##################
 # Criar um novo repositório local
 git init
 
@@ -87,10 +77,9 @@ git clone <repository_url>
 
 # Criar um repositório bare (sem working directory)
 git clone --bare <repository_url>
-\`\`\`
 
-## Outros Comandos Úteis
-\`\`\`
+
+################## Outros Comandos Úteis  ##################
 # Verificar status do repositório
 git status
 
@@ -102,5 +91,3 @@ git revert <commit_hash>
 
 # Resetar mudanças para um commit específico
 git reset --hard <commit_hash>
-\`\`\`
-EOF
