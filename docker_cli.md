@@ -1,9 +1,7 @@
-# Criar docker_cli.md
-cat <<EOF > docker_cli.md
-# DOCKER
+## DOCKER Commands
+```bash
+########## Executar Containers ##########
 
-## Executar Containers
-\`\`\`
 # Executar um container
 docker run <image_name>
 
@@ -12,10 +10,9 @@ docker run -it <image_name> /bin/bash
 
 # Executar um container em background (detached mode)
 docker run -d <image_name>
-\`\`\`
 
-## Visualizar Containers
-\`\`\`
+########## Visualizar Containers ##########
+
 # Listar containers em execução
 docker ps
 
@@ -27,19 +24,15 @@ docker logs <container_id>
 
 # Inspecionar detalhes de um container
 docker inspect <container_id>
-\`\`\`
 
 ## Build de Imagens
-\`\`\`
 # Criar uma imagem a partir de um Dockerfile
 docker build -t <image_name>:<tag> .
 
 # Forçar rebuild sem cache
 docker build --no-cache -t <image_name>:<tag> .
-\`\`\`
 
-## Gerenciar Imagens
-\`\`\`
+########## Gerenciar Imagens ##########
 # Listar imagens locais
 docker images
 
@@ -48,10 +41,8 @@ docker rmi <image_id>
 
 # Baixar uma imagem do Docker Hub
 docker pull <image_name>
-\`\`\`
 
-## Manipular Volumes
-\`\`\`
+########## Manipular Volumes ##########
 # Criar um volume
 docker volume create <volume_name>
 
@@ -63,10 +54,8 @@ docker volume rm <volume_name>
 
 # Inspecionar um volume
 docker volume inspect <volume_name>
-\`\`\`
 
-## Outros Comandos Úteis
-\`\`\`
+########## Outros Comandos Úteis ##########
 # Parar um container
 docker stop <container_id>
 
@@ -78,5 +67,3 @@ docker rm <container_id>
 
 # Remover todos os containers parados
 docker container prune
-\`\`\`
-EOF
